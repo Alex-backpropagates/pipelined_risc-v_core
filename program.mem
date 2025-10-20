@@ -1,7 +1,7 @@
-//00000013  // addi x0, x0, 0   (NOP)
-//00400093  // addi x1, x0, 4
-//00800113  // addi x2, x0, 8
-//00C00193  // addi x3, x0, 12
+00000013  // addi x0, x0, 0   (NOP)
+00400093  // addi x1, x0, 4
+00800113  // addi x2, x0, 8
+00C00193  // addi x3, x0, 12
 
 // Simple addition program
 //002081B3  // add x3, x1, x2

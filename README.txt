@@ -1,17 +1,18 @@
 RISC-V Pipelined core (IF,ID,EX,MEM,WB) with basic RV32I instructions, made in one month
 
 WORKING RV32I INSTRUCTIONS:
-add
+add/addi
 sub
-and
-or
-xor
+and/andi
+or/ori
+xor/xori
 beq
 bne
 sw
 lw
-srl
-sll
+srl/srli
+sll/slli
+jal/jalr
 
 
 To modify the program used by the core, edit the file program.mem

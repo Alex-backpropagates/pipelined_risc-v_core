@@ -96,7 +96,7 @@ logic [31:0] instr_id;
 logic [31:0] pc_id;
 logic [31:0] pc_plus_4_id;
 
-IF_ID if_id(
+IF_ID if_id( //pipeline registers
     .clk(clk),         
     .rst_n(rst_n),
     .flush(flush_id),
@@ -131,7 +131,7 @@ logic jal_id;
 logic jalr_id;
 logic memRead_id;
 
-control control_i(
+control control_i( //control unit
     .opcode(instr_id[6:0]),
     .alu_category(alu_category_id),
     .branch(branch_id),
@@ -173,7 +173,7 @@ logic jal_ex;
 logic jalr_ex;
 logic memRead_ex;
 
-ID_EX id_ex(
+ID_EX id_ex( //pipeline registers
     .clk(clk),
     .rst_n(rst_n),          
     .flush(flush_ex),
@@ -300,9 +300,9 @@ logic memRead_mem;
 logic [31:0] alu_result_mem;
 logic jal_mem;
 
-EX_MEM ex_mem(
-    .clk(clk),            // Clock signal
-    .rst_n(rst_n),            // Reset signal
+EX_MEM ex_mem( //pipeline registers
+    .clk(clk),
+    .rst_n(rst_n),    
 
     .alu_result_ex(alu_result_ex),
     .pc_plus_4_ex(pc_plus_4_ex),          
@@ -343,7 +343,7 @@ logic [4:0] rd_wb;
 logic [31:0] data_wb;
 logic [31:0] alu_result_wb;
 
-MEM_WB mem_wb(
+MEM_WB mem_wb( //pipeline registers
     .clk(clk),            
     .rst_n(rst_n),                      
 
