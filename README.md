@@ -1,0 +1,30 @@
+# RISC-V Pipelined core (IF,ID,EX,MEM,WB) with basic RV32I instructions, made in one month
+
+WORKING RV32I INSTRUCTIONS:
+- add/addi
+- sub
+- and/andi
+- or/ori
+- xor/xori
+- beq
+- bne
+- sw
+- lw
+- srl/srli
+- sll/slli
+- jal/jalr
+
+
+To modify the program used by the core, edit the file program.mem
+
+On Linux, by using Verilator and GTKwave, run the following commands :
+
+verilator --binary --trace  risc-v_core_pipelined.sv tb.sv --top tb <br />
+OR IF YOU WANT TO TEST THE SINGLE CYCLE CORE : <br />
+verilator --binary --trace  risc-v_core_single_cycle.sv tb.sv --top tb <br />
+
+./obj_dir/Vtb <br />
+
+sgtkwave waves.vcd <br />
+
+
