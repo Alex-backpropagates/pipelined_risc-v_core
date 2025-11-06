@@ -16,6 +16,8 @@ WORKING RV32I INSTRUCTIONS:
 - sll/slli
 - jal/jalr
 
+Made for self-education purpose
+
 # Testing the core
 
 To modify the program used by the core, edit the file program.mem
@@ -28,7 +30,7 @@ OR IF YOU WANT TO TEST THE SINGLE CYCLE CORE : <br />
 
 ```./obj_dir/Vtb <br />```
 
-```sgtkwave waves.vcd <br />```
+```gtkwave waves.vcd <br />```
 
 You can also use Vivado to simulate.
 
