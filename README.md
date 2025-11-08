@@ -37,24 +37,24 @@ You can also use Vivado to simulate.
 <img width="1188" height="259" alt="image" src="https://github.com/user-attachments/assets/62cdfc85-eedc-480c-acae-7349cd0b92c8" />
 
 ```
-00000013  // addi x0, x0, 0   (NOP) <br />
-00400093  // addi x1, x0, 4 <br />
-00800113  // addi x2, x0, 8 <br />
-00C00193  // addi x3, x0, 12 <br />
+00000013  // addi x0, x0, 0   (NOP)
+00400093  // addi x1, x0, 4
+00800113  // addi x2, x0, 8 
+00C00193  // addi x3, x0, 12 
 
-// GOAL : TESTING LOAD HAZARDS <br />
-00A00513  // addi x10, x0, 10 <br />
-00A02023  // sw x10, 0(x0)       <br />
-00002283  // lw x5, 0(x0)        <br />
-00550333  // add x6, x10, x5    <br />
+// GOAL : TESTING LOAD HAZARDS 
+00A00513  // addi x10, x0, 10 
+00A02023  // sw x10, 0(x0)       
+00002283  // lw x5, 0(x0)        
+00550333  // add x6, x10, x5   
 
 
-// GOAL : LOOPING THROUGH A COUNTER OF 9 LOOPS<br />
-00000013 //NOP<br />
-00800513 // addi x10, x0, 8<br />
-FFF50513 // addi x10, x10, -1<br />
-FEA01F63 // bne x10, x0, -2<br />
-06300693 // addi x13, x0, 99 (On the screen you see alu result getting x63 which is d99)<br />
+// GOAL : LOOPING THROUGH A COUNTER OF 9 LOOPS
+00000013 //NOP
+00800513 // addi x10, x0, 8
+FFF50513 // addi x10, x10, -1
+FEA01F63 // bne x10, x0, -2
+06300693 // addi x13, x0, 99 (On the screen you see alu result getting x63 which is d99)
 ```
 
 
